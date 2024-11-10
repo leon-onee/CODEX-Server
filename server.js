@@ -3,14 +3,8 @@ const cors = require('cors')
 const app = express()
 
 app.use(express.json())
-app.use(
-	cors({
-		origin: 'https://cadex-kappa.vercel.app',
-		methods: ['POST'],
-		allowedHeaders: ['Content-Type'],
-	})
-)
-app.options('/submit', cors());
+app.use(cors());
+app.options('*', cors());
 
 app.post('/submit', (req, res) => {
 	const { name } = req.body
