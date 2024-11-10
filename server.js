@@ -10,6 +10,7 @@ app.use(
 		allowedHeaders: ['Content-Type'],
 	})
 )
+app.options('/submit', cors());
 
 app.post('/submit', (req, res) => {
 	const { name } = req.body
