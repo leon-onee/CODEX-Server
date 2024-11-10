@@ -5,7 +5,7 @@ const app = express()
 app.use(express.json())
 app.use(
 	cors({
-		origin: process.env.CLIENT_HOST || 'http://localhost:5173',
+		origin: 'https://cadex-kappa.vercel.app/',
 		methods: ['POST'],
 		allowedHeaders: ['Content-Type'],
 	})
